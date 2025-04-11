@@ -1,9 +1,11 @@
-name: CI
+name: CI mine
 on:
   push:
     branches: [main]
   pull_request:
     branches: '*'
+env: 
+  SONAR_SCANNER_VERSION: 5.0.1.3006
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,7 +21,7 @@ jobs:
             restore-keys: ${{ runner.os }}-sonar
       - name: Run Codescan On Push
         if: github.event_name == 'push'
-        uses: salil-sharma-ar/codescan-scanner-action@test-salil-11
+        uses: codescan-io/codescan-scanner-action@1.6
         with:
           codeScanUrl: https://vadev.codescan.io/
           organization: test-salil-apr-25
@@ -29,7 +31,7 @@ jobs:
           failOnRedQualityGate: false
       - name: Run Codescan On PR
         if: github.event_name == 'pull_request'
-        uses: salil-sharma-ar/codescan-scanner-action@test-salil-11
+        uses: codescan-io/codescan-scanner-action@1.6
         with:
           codeScanUrl: https://vadev.codescan.io/
           organization: test-salil-apr-25
@@ -46,3 +48,8 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: codescan.sarif
+      - name: Upload SARIF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: codescan-sarif
+          path: codescan.sarif
