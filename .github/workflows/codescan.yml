@@ -25,7 +25,7 @@ jobs:
         with:
           codeScanUrl: https://test.codescan.io/
           organization: salil-test-apr-25
-          projectKey: apex-pr
+          projectKey: apex-wf
           login: ${{ secrets.codescan_token }}
           generateSarifFile: true
           failOnRedQualityGate: false
@@ -35,7 +35,7 @@ jobs:
         with:
           codeScanUrl: https://test.codescan.io/
           organization: salil-test-apr-25
-          projectKey: apex-pr
+          projectKey: apex-wf
           login: ${{ secrets.codescan_token }}
           generateSarifFile: true
           failOnRedQualityGate: false
