@@ -1,11 +1,11 @@
 name: CI mine
+env: 
+  SONAR_SCANNER_VERSION: 5.0.1.3006
 on:
   push:
     branches: [main]
   pull_request:
     branches: '*'
-env: 
-  SONAR_SCANNER_VERSION: 5.0.1.3006
 jobs:
   build:
     runs-on: ubuntu-latest
