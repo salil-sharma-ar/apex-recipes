@@ -31,6 +31,7 @@ jobs:
           failOnRedQualityGate: true
           args: |
             sonar.scanner.skipJreProvisioning=true
+            sonar.scanner.keepReport=true
       - name: Run Codescan On PRs
         if: github.event_name == 'pull_request'
         uses: codescan-io/codescan-scanner-action@1.6
@@ -47,6 +48,7 @@ jobs:
             sonar.pullrequest.base=${{github.base_ref}}
             sonar.pullrequest.key=${{github.event.number}}
             sonar.scanner.skipJreProvisioning=true
+            sonar.scanner.keepReport=true
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
         with:
