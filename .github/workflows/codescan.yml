@@ -23,10 +23,10 @@ jobs:
         if: github.event_name == 'push'
         uses: codescan-io/codescan-scanner-action@cd6610
         with:
+          organization: dummy123
+          projectKey: dummy123
           codeScanUrl: https://test.codescan.io/
-          organization: salil-test-apr-25
-          projectKey: apex-wf
-          login: ${{ secrets.codescan_token }}
+          login: squ_60f5852e4c8d78fab61b74f92391023c6c37b8ec
           generateSarifFile: true
           failOnRedQualityGate: false
           args: |
@@ -36,9 +36,9 @@ jobs:
         uses: codescan-io/codescan-scanner-action@cd6610
         with:
           codeScanUrl: https://test.codescan.io/
-          organization: salil-test-apr-25
-          projectKey: apex-wf
-          login: ${{ secrets.codescan_token }}
+          organization: dummy123
+          projectKey: dummy123
+          login: squ_60f5852e4c8d78fab61b74f92391023c6c37b8ec
           generateSarifFile: true
           failOnRedQualityGate: false
           scanChangedFilesOnly: false
