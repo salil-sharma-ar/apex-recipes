@@ -31,7 +31,7 @@ jobs:
           failOnRedQualityGate: false
           args: |
             sonar.scanner.skipJreProvisioning=true
-      - name: Run Codescan On PR
+      - name: Run Codescan On PRs
         if: github.event_name == 'pull_request'
         uses: codescan-io/codescan-scanner-action@cd6610
         with:
