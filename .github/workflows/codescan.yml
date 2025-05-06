@@ -29,6 +29,8 @@ jobs:
           login: ${{ secrets.codescan_token }}
           generateSarifFile: true
           failOnRedQualityGate: false
+          args: |
+            sonar.scanner.skipJreProvisioning=true
       - name: Run Codescan On PR
         if: github.event_name == 'pull_request'
         uses: codescan-io/codescan-scanner-action@cd6610
@@ -44,6 +46,7 @@ jobs:
             sonar.pullrequest.branch=${{github.head_ref}}
             sonar.pullrequest.base=${{github.base_ref}}
             sonar.pullrequest.key=${{github.event.number}}
+            sonar.scanner.skipJreProvisioning=true
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
         with:
