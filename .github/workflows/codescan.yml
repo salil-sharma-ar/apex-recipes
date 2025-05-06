@@ -28,7 +28,7 @@ jobs:
           projectKey: apex-wf
           login: squ_60f5852e4c8d78fab61b74f92391023c6c37b8ec
           generateSarifFile: true
-          failOnRedQualityGate: false
+          failOnRedQualityGate: true
           args: |
             sonar.scanner.skipJreProvisioning=true
       - name: Run Codescan On PRs
@@ -40,8 +40,8 @@ jobs:
           projectKey: apex-wf
           login: squ_60f5852e4c8d78fab61b74f92391023c6c37b8ec
           generateSarifFile: true
-          failOnRedQualityGate: false
-          scanChangedFilesOnly: false
+          failOnRedQualityGate: true
+          scanChangedFilesOnly: true
           args: |
             sonar.pullrequest.branch=${{github.head_ref}}
             sonar.pullrequest.base=${{github.base_ref}}
