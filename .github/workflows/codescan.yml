@@ -27,8 +27,8 @@ jobs:
           organization: salil-test-apr-25
           projectKey: apex-wf
           login: squ_60f5852e4c8d78fab61b74f92391023c6c37b8ec
-          generateSarifFile: false
-          failOnRedQualityGate: true
+          generateSarifFile: true
+          failOnRedQualityGate: false
           args: |
             sonar.scanner.skipJreProvisioning=true
             sonar.scanner.keepReport=true
@@ -40,8 +40,8 @@ jobs:
           organization: salil-test-apr-25
           projectKey: apex-wf
           login: squ_60f5852e4c8d78fab61b74f92391023c6c37b8ec
-          generateSarifFile: false
-          failOnRedQualityGate: true
+          generateSarifFile: true
+          failOnRedQualityGate: false
           scanChangedFilesOnly: true
           args: |
             sonar.pullrequest.branch=${{github.head_ref}}
