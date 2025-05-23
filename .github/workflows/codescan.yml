@@ -42,7 +42,7 @@ jobs:
           login: squ_28b84cca14aba334d5d279a5395269247e777ff6
           generateSarifFile: true
           failOnRedQualityGate: true
-          scanChangedFilesOnly: true
+          scanChangedFilesOnly: false
           args: |
             sonar.pullrequest.branch=${{github.head_ref}}
             sonar.pullrequest.base=${{github.base_ref}}
