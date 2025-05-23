@@ -1,4 +1,4 @@
-# Apex Recipes
+# Apex Recipes  
 
 [![CI Workflow](https://github.com/trailheadapps/apex-recipes/workflows/CI/badge.svg)](https://github.com/trailheadapps/apex-recipes/actions?query=workflow%3ACI) [![Packaging Workflow](https://github.com/trailheadapps/apex-recipes/workflows/Packaging/badge.svg)](https://github.com/trailheadapps/apex-recipes/actions?query=workflow%3APackaging) [![codecov](https://codecov.io/gh/trailheadapps/apex-recipes/branch/main/graph/badge.svg)](https://codecov.io/gh/trailheadapps/apex-recipes)
 
