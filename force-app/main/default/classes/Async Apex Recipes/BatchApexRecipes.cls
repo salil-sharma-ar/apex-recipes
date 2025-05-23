@@ -1,6 +1,6 @@
 /**
  * @description Demonstrates the use of the Database.Batchable interface. The
- * methods in this class are called by the system as the batch executes.
+ * methods in this class is called by the system as the batch executes.
  * To execute this batch use `Database.executeBatch(new BatchApexRecipes());`
  *
  * More on the Batchable interface:

@@ -1,7 +1,7 @@
 /**
  * @description Demonstrates the `@future` syntax and usage
  * @group Async Apex Recipes
- */
+ */ 
 public with sharing class AtFutureRecipes {
     /**
      * @description This class features a 'circuit breaker' variable. While this is not a
@@ -50,10 +50,14 @@ public with sharing class AtFutureRecipes {
         // replaced with this RestClient call:
         // HttpResponse response = RestClient.makeApiCall('NamedCredentialName',
         //      RestClient.GET, '/');
+        String bar = new String('bar');
+        System.debug('Entering test');
+
         Http h = new Http();
         HttpRequest request = new HttpRequest();
         request.setEndpoint('https://' + url);
         request.setMethod('GET');
+        
 
         HttpResponse response = h.send(request);
         /**
@@ -61,7 +65,7 @@ public with sharing class AtFutureRecipes {
          * receive because this recipe is intended only to demonstrate making a
          * callout from an @future annotated method, we'll stop here.
          * However, we do want to demonstrate throwing an exception if the
-         * callout fails
+         * callout
          */
 
         if (response.getStatusCode() != 200) {
