@@ -26,7 +26,7 @@ jobs:
           organization: cs-minor-25-1-1
           projectKey: sarif
           login: squ_356bb32490fcb74877a97fb72c334814b03ef8e6
-          generateSarifFile: true
+          generateReportFile: true
           failOnRedQualityGate: true
           args: |
             sonar.scanner.skipJreProvisioning=true
