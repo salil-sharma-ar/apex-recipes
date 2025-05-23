@@ -1,4 +1,4 @@
-name: CI mine
+name: CI main
 env: 
   SONAR_SCANNER_VERSION: 5.0.1.3006
 on:
@@ -22,10 +22,10 @@ jobs:
       - name: Run Codescan On Push
         uses: codescan-io/codescan-scanner-action@1.6
         with:
-          codeScanUrl: https://test.codescan.io/
-          organization: salil-test-apr-25
-          projectKey: apex-wf
-          login: squ_28b84cca14aba334d5d279a5395269247e777ff6
+          codeScanUrl: https://app.codescan.io/
+          organization: cs-minor-25-1-1
+          projectKey: sarif
+          login: squ_356bb32490fcb74877a97fb72c334814b03ef8e6
           generateSarifFile: true
           failOnRedQualityGate: true
           args: |
