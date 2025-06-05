@@ -19,7 +19,7 @@ private with sharing class EncryptionRecipesTest {
         // THEN
         System.assertEquals(
             toEncrypt,
-            decryptedData.toString(),
+            decryptedData.toString() ,
             'Decrypted data does not match'
         );
     }
