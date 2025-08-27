@@ -55,6 +55,7 @@ public with sharing class AtFutureRecipes {
         request.setEndpoint('https://' + url);
         request.setMethod('GET');
         HttpResponse response = h.send(request);
+        System.debug("QA");
         /**
          * This is the point in which you would interact with the response you
          * receive because this recipe is intended only to demonstrate making a
