@@ -56,6 +56,7 @@ public with sharing class AtFutureRecipes {
         request.setMethod('GET');
         HttpResponse response = h.send(request);
         /**
+         * Test comment
          * This is the point in which you would interact with the response you
          * receive because this recipe is intended only to demonstrate making a
          * callout from an @future annotated method, we'll stop here.
